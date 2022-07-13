@@ -4,9 +4,9 @@
   "description": "",
   "main": "Calculator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=5501 serve",
+    "test": "start-server-and-test start http://localhost:5501 cy:open",
     "cy:open": "cypress open"
-
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/kurtis-casperson/end-to-end-testProject#readme",
   "devDependencies": {
-    "cypress": "^10.3.0"
+    "cypress": "^10.3.0",
+    "serve": "^14.0.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
